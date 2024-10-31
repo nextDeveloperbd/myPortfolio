@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   return (
-    <div>
+    <div className="mb-12">
       <CommonTitle
         subTitle={"Visit my portfolio and share your review"}
         title={"PORTFOLIO"}
@@ -15,7 +15,7 @@ const Portfolio = () => {
         <div className=" shadow-xl border border-gray-900 shadow-black text-white space-y-3 bg-gray-900 p-3 rounded-md">
           <div className="w-full h-60 overflow-hidden">
           <img
-            src="./public/images/team01.png"
+            src="/public/images/team01.png"
             alt=""
             className="w-full h-60 object-cover rounded-md hover:scale-105 duration-500"
           />

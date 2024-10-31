@@ -2,8 +2,8 @@ import React from 'react';
 
 const Pricing = () => {
     return (
-        <div>
-            <section className="py-6 bg-gray-800 text-gray-50">
+        
+            <section className="py-6 px-2 bg-gray-800 text-gray-50 mb-12">
 	<div className="container mx-auto p-4 sm:p-10">
 		<div className="mb-16 space-y-4 text-center">
 			<h1 className="text-4xl font-semibold leadi">Pricing</h1>
@@ -138,7 +138,7 @@ const Pricing = () => {
 		</div>
 	</div>
 </section>
-        </div>
+       
     );
 };
 

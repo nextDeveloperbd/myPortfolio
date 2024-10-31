@@ -14,7 +14,7 @@ import { SiTailwindcss } from "react-icons/si";
 
 const Banner = () => {
   return (
-    <section className="bg-gray-800 text-gray-100 rounded-md mt-16 md:mt-0 ">
+    <section className="bg-gray-900 text-gray-100 rounded-md mt-16 md:mt-0 ">
       <div className="container flex flex-col gap-2 justify-center p-2 md:p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
         <div className="flex flex-col w-full md:w-full lg:w-[70%] p-2 justify-center">
           <div className="text-center md:text-left space-y-2 mb-4">
