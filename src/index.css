@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.primary-button{
+    background-color:#814ff3;
+    color: white;
+   
+}
+.primary-button:hover{
+    color: black;
+   
+}
