@@ -7,7 +7,7 @@ import { TbDatabaseOff } from "react-icons/tb";
 
 const Feature = () => {
     return (
-        <div className="my-8 p-2  text-white ">
+        <div className="mt-8 p-2  text-white ">
             <div className="px-3">
             <h1>FEATURES</h1>
             <h1 className="text-3xl">What I Do</h1>

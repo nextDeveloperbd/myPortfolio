@@ -36,7 +36,7 @@ const Testimonial = () => {
             </div>
             <div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-violet-400 text-gray-900">
               <img
-                src="/public/images/testimonial/person1.jpg"
+                src="https://i.ibb.co.com/pjyg3t4/person1.jpg"
                 alt=""
                 className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 "
               />
@@ -72,7 +72,7 @@ const Testimonial = () => {
             </div>
             <div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-violet-400 text-gray-900">
               <img
-                src="/public/images/testimonial/person2.jpg"
+                src="https://i.ibb.co.com/PtSkKJb/person3.jpg"
                 alt=""
                 className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 "
               />
@@ -108,7 +108,7 @@ const Testimonial = () => {
             </div>
             <div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-violet-400 text-gray-900">
               <img
-                src="/public/images/testimonial/person3.jpg"
+                src="https://i.ibb.co.com/pR5K3tR/person2.jpg"
                 alt=""
                 className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500"
               />
@@ -144,7 +144,7 @@ const Testimonial = () => {
             </div>
             <div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-violet-400 text-gray-900">
               <img
-                src="/public/images/testimonial/person1.jpg"
+                src="https://i.ibb.co.com/58T52Zq/person4.jpg"
                 alt=""
                 className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500"
               />

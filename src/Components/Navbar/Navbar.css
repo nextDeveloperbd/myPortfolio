@@ -1,4 +1,6 @@
-li a.active{
-    color: red;
-    text-decoration: underline;
+.bgColor{
+    background-color: red;
+}
+.normal{
+    background-color: gray;
 }

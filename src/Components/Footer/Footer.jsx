@@ -7,20 +7,20 @@ const Footer = () => {
         <div className='pb-4'>
             <footer className="footer bg-base-900 p-10 text-white mt-8">
   <aside>
-  <Link className="flex gap-2 text-xl font-bold items-center text-[#814ff3]"><img className="w-20 h-20" src="./public/wev developer.jpg" alt="" /> <span className="text-sm">Webflexcode</span></Link>
+  <Link className="flex gap-2 text-xl font-bold items-center text-[#814ff3]"><img className="w-20 h-20" src="https://i.ibb.co.com/2smhFSb/wev-developer.jpg" alt="" /> <span className="text-sm">Webflexcode</span></Link>
     <p>
       Webflexcode company ltd.
       <br />
       Providing reliable tech since 2022
     </p>
     <div className="flex gap-2">
-                    <Link className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
+                    <Link to="https://www.facebook.com/WebFlexCode" target="_blank" className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
                     <FaFacebook />
                     </Link>
-                    <Link className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
+                    <Link to="https://www.linkedin.com/in/md-morad-hossain-786a30157/" target="_blank" className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
                     <FaLinkedinIn />
                     </Link>
-                    <Link className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
+                    <Link to="https://www.instagram.com/webflexcode/" target="_blank" className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
                     <FaInstagramSquare className="text-lg " />
                     </Link>
                     
@@ -53,6 +53,7 @@ const Footer = () => {
 <aside className='text-center text-slate-500 space-y-2'>
     <p>Copyright © 2022 - {new Date().getFullYear()} ; All right reserved by <a href="#" className='text-white'>Webflexcocde</a></p>
     <p>Designed By <a href="#" className='text-green-500'>Webflexcocde</a></p>
+    {/* <VisitorCount></VisitorCount> */}
   </aside>
         </div>
     );

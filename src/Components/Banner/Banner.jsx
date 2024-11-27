@@ -14,18 +14,18 @@ import { SiTailwindcss } from "react-icons/si";
 
 const Banner = () => {
   return (
-    <section className="bg-gray-900 text-gray-100 rounded-md mt-16 md:mt-0 ">
+    <section className="bg-gray-900 text-gray-100 rounded-md mt-16 md:mt-0 pt-8 ">
       <div className="container flex flex-col gap-2 justify-center p-2 md:p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
         <div className="flex flex-col w-full md:w-full lg:w-[70%] p-2 justify-center">
           <div className="text-center md:text-left space-y-2 mb-4">
             <h1>Welcome To My World</h1>
             <h1 className="text-2xl md:text-3xl lg:text-3xl ">
-              Hi, I'm A Senior{" "}
+              Hi, I'm A Junior{" "}
             </h1>
             <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold leading-none sm:text-6xl">
-              <span className="text-violet-400"> Web Developer </span>
+              <span className="bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient"> Web Developer </span>
               <span className="block text-2xl">and</span>
-              <span className="text-violet-400">Digital Marketer</span>
+              <span className="bg-gradient-to-r from-green-700 via-blue-500 to-pink-400 text-transparent bg-clip-text animate-gradient">Digital Marketer</span>
             </h1>
             <p className="mt-6 mb-8 text-lg sm:mb-12">
               Dictum aliquam porta in condimentum ac integer
@@ -37,19 +37,19 @@ const Banner = () => {
             <div>
               <h1 className="mb-2">Find with me</h1>
               <div className="flex gap-2">
-                <Link className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
+                <Link to="https://www.facebook.com/WebFlexCode" target="_blank" className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
                   <FaFacebook />
                 </Link>
-                <Link className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
+                <Link to="https://www.linkedin.com/in/md-morad-hossain-786a30157/" target="_blank" className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
                   <FaLinkedinIn />
                 </Link>
-                <Link className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
+                <Link to="https://www.instagram.com/webflexcode/" target="_blank" className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
                   <FaInstagramSquare className="text-lg " />
                 </Link>
-                <Link className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
+                <Link to="https://www.pinterest.com/webflexcode/" target="_blank" className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
                   <FaPinterest className="text-lg " />
                 </Link>
-                <Link className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
+                <Link to="https://x.com/WebFlexCode" target="_blank" className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-sm shadow-2xl shadow-white">
                   <FaXTwitter className="text-lg " />
                 </Link>
               </div>
@@ -87,9 +87,9 @@ const Banner = () => {
         </div>
         <div className="md:w-[30%] w-full flex items-center justify-center ">
           <img
-            src="./public/images/architect.png"
+            src="https://i.ibb.co.com/88HKS9j/architect.png"
             alt=""
-            className="object-contain w-[100%] shadow-xl shadow-gray-700 "
+            className="object-contain w-[100%]  "
           />
         </div>
       </div>

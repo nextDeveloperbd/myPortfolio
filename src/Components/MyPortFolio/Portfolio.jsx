@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   return (
-    <div className="mb-12">
+    <div className="my-12 py-12">
       <CommonTitle
         subTitle={"Visit my portfolio and share your review"}
         title={"PORTFOLIO"}
@@ -15,7 +15,7 @@ const Portfolio = () => {
         <div className=" shadow-xl border border-gray-900 shadow-black text-white space-y-3 bg-gray-900 p-3 rounded-md">
           <div className="w-full h-60 overflow-hidden">
           <img
-            src="/public/images/team01.png"
+            src="https://i.ibb.co.com/W2wn8G7/team01.png"
             alt=""
             className="w-full h-60 object-cover rounded-md hover:scale-105 duration-500"
           />
@@ -41,7 +41,7 @@ const Portfolio = () => {
         <div className=" shadow-xl border border-gray-900 shadow-black text-white space-y-3 bg-gray-800 p-3 rounded-md">
          <div className="w-full h-60 overflow-hidden ">
          <img
-            src="./public/images/Real state.png"
+            src="https://i.ibb.co.com/qM10Nty/Real-state.png"
             alt=""
             className="w-full h-60 object-cover rounded-md hover:scale-105 duration-500 "
           />
@@ -62,11 +62,11 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        {/* 1st div */}
+        {/* 3rd div */}
         <div className=" shadow-xl border border-gray-900 shadow-black text-white space-y-3 bg-gray-800 p-3 rounded-md">
         <div className="w-full h-60 overflow-hidden">
         <img
-            src="./public/images/Social marketing.jpg"
+            src="https://i.ibb.co.com/92GfsS0/Social-marketing.jpg"
             alt=""
             className="w-full h-60  rounded-md hover:scale-105 duration-500"
           />
@@ -91,7 +91,7 @@ const Portfolio = () => {
         <div className=" shadow-lg border border-gray-900 shadow-black text-white space-y-3 bg-gray-800 p-3 rounded-md">
          <div className="w-full h-60 overflow-hidden">
          <img
-            src="./public/images/instagram follower.jpg"
+            src="https://i.ibb.co.com/yyb38RQ/instagram-follower.jpg"
             alt=""
             className="w-full h-60  rounded-md hover:scale-105 duration-500"
           />
@@ -116,7 +116,7 @@ const Portfolio = () => {
         <div className=" shadow-lg  shadow-slate-900 text-white space-y-3 bg-gray-900 p-3 rounded-md">
           <div className="w-full h-60 overflow-hidden">
           <img
-            src="./public/images/Architechture desinging site.png"
+            src="https://i.ibb.co.com/6ZZLzbt/Architechture-desinging-site.png"
             alt=""
             className="w-full h-60 object-cover rounded-md hover:scale-105 duration-500"
           />
@@ -142,7 +142,7 @@ const Portfolio = () => {
         <div className=" shadow-lg border border-gray-900 shadow-black text-white space-y-3 bg-gray-800 p-3 rounded-md">
           <div className="w-full h-60 overflow-hidden">
           <img
-            src="./public/images/Justice website.png"
+            src="https://i.ibb.co.com/X4hzRX4/Justice-website.png"
             alt=""
             className="w-full h-60 object-cover rounded-md hover:scale-105 duration-500"
           />
