@@ -2,16 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+
+a.active{
+  background-color:#5271ff;
+  border-radius: 6px;
+  color: white;
+}
+
 .primary-button{
     background-color:#814ff3;
-    color: white;
-   
+    color: white;   
 }
 .primary-button:hover{
     color: black;
    
 }
-.animate-gradient {
+.hireBtn{
+  @apply absolute bottom-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90
+}
+/* Profile and image */
+
+.btnPortfolio{
+  @apply absolute bottom-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90
+}
+
+.socialIcon{
+  @apply border p-1 rounded-full text-blue-600 hover:text-white duration-500
+}
+.socialBtnHover{
+  @apply hover:bg-blue-600 rounded-full duration-500
+}
+/* Menu btn */
+.menuBtn{
+  @apply flex items-center gap-2 p-2 rounded-md hover:text-red-600 duration-500 mb-1
+}
+
+  /* animation text */
+  .animate-gradient {
     background-size: 300%;
     -webkit-animation: animatedgradient 6s ease infinite alternate;
     -moz-animation: animatedgradient 6s ease infinite alternate;
@@ -29,3 +56,31 @@
       background-position: 0% 50%;
     }
   }
+  /* animation text */
+  /* typing */
+  @layer utilities {
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+  
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+  
+    .typing-text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid black; /* Cursor effect */
+      width: 0;
+      animation: typing 3s steps(20, end) forwards, blink 0.6s infinite;
+    }
+  }
+  /* typing */

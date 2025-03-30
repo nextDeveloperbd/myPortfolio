@@ -1,21 +1,12 @@
-import Banner from "../Banner/Banner";
-import Feature from "../Feature/Feature";
-import Portfolio from "../MyPortFolio/Portfolio";
-import Pricing from "../Pricing/Pricing";
-import Testimonial from "../Testimonial/Testimonial";
+import LeftSide from "./LeftSide";
+import RightSide from "./RightSide";
 
-const Home = () => {
+const Home = () => {   
+    
     return (
-        <div className="">
-            <Banner></Banner>
-           <Feature></Feature>
-           <Portfolio></Portfolio>
-           <Pricing></Pricing>
-           <Testimonial></Testimonial>
-             
-
-  
-        </div>
+      <div>
+        <RightSide></RightSide>        
+      </div>
     );
 };
 

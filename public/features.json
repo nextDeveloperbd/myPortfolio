@@ -1,0 +1,43 @@
+ [
+      {
+        "_id":1,
+        "title": "Web Development",
+        "original_price": "150",
+        "discounted_price": "100",
+        "features": [
+          "HTML, CSS, Javascript",
+          "Domain, Hosting, cPanel, Database",
+          "Lorem consectetur adipisicing",
+          "Up to 5 Information Pages"
+        ]
+      },
+      {
+        "_id":2,
+        "title": "Ecommerce Website",
+        "original_price": "300",
+        "discounted_price": "250",
+        "features": [
+          "HTML, CSS, Javascript, React, MongoDB",
+          "Customized E-commerce System",
+          "Shopping Cart & Checkout Process",
+          "User Signup/Registration Process",
+          "Product Reviews",
+          "Unlimited Categories and Products. 30 inserted by us"
+        ]
+      },
+      {
+        "_id":3,
+        "title": "Digital Marketing",
+        "original_price": "130",
+        "discounted_price": "80",
+        "features": [
+          "Facebook Marketing",
+          "Instagram Marketing",
+          "Twitter Marketing",
+          "Search Engine Optimization",
+          "Email Marketing"
+        ]
+      }
+    ]
+  
+  

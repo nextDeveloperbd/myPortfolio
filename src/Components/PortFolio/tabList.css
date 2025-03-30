@@ -1,0 +1,50 @@
+/* Circle */
+.portfolioHove figure {
+	position: relative;
+}
+.portfolioHove figure::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: rgba(255,255,255,.2);
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+.portfolioHove figure:hover::before {
+	-webkit-animation: circle .75s;
+	animation: circle .75s;
+}
+@-webkit-keyframes circle {
+	0% {
+		width: 110%;
+		height: 110%;
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes circle {
+	0% {
+		width: 110%;
+		height: 110%;
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		
+		opacity: 1;
+	}
+}

@@ -1,71 +1,66 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+import { HelmetProvider } from 'react-helmet-async';
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './Components/Home/Home.jsx';
-import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 import MainLayout from './Components/MainLayout/MainLayout.jsx';
-import Portfolio from './Components/MyPortFolio/Portfolio.jsx';
-import Pricing from './Components/Pricing/Pricing.jsx';
-import ContactUs from './Components/ContactUs/ContactUs.jsx';
+import Home from './Components/Home/Home.jsx';
+import Portfolio from './Components/PortFolio/Portfolio.jsx';
+import ServicesAndPricing from './Components/ServicesAndPricing/ServicesAndPricing.jsx';
+import Resume from './Components/Resume/Resume.jsx';
+import Products from './Components/Products/Products.jsx';
 import Blogs from './Components/Blogs/Blogs.jsx';
-import Services from './Components/Services/Services.jsx';
-import Register from './Components/UserLog/Register.jsx';
-import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
-import SignIn from './Components/UserLog/SignIn.jsx';
-import { Toaster } from 'react-hot-toast';
+import Contact from './Components/Contact/Contact.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement:<ErrorPage></ErrorPage>,
-    children:[
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: '/',
+        element: <Home></Home>
       },
       {
-        path:'/portfolio',
-        element:<Portfolio></Portfolio>
+        path: '/portfolio',
+        element: <Portfolio></Portfolio>
       },
       {
-        path:'/pricing',
-        element:<Pricing></Pricing>
+        path: '/services',
+        element: <ServicesAndPricing></ServicesAndPricing>
       },
       {
-        path:'/contact',
-        element:<ContactUs></ContactUs>
+        path: '/resume',
+        element: <Resume></Resume>
       },
       {
-        path:'/blogs',
-        element:<Blogs></Blogs>
+        path: '/products',
+        element: <Products></Products>
       },
       {
-        path:'/services',
-        element:<Services></Services>
+        path: '/blogs',
+        element: <Blogs></Blogs>
       },
       {
-        path:'/register',
-        element:<Register></Register>
-      },{
-        path:'/signIn',
-        element:<SignIn></SignIn>
+        path: '/contact',
+        element: <Contact></Contact>
       }
-      
+
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider>
-    <RouterProvider router={router}></RouterProvider>
-    <Toaster />
-    </AuthProvider>
+    <HelmetProvider>
+
+      <RouterProvider router={router}></RouterProvider>
+      {/* <Toaster /> */}
+    </HelmetProvider>
+
   </React.StrictMode>,
 )
