@@ -33,7 +33,7 @@ const Resume = () => {
                         <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-3 md:divide-x">
                             <div noValidate="" className="flex flex-col py-6 space-y-6 md:py-6 md:px-6 md:col-span-2">
                                 <div>
-                                    <h1 className="text-4xl font-bold">Md Morad Hossain</h1>
+                                    <h1 className="text-xl md:text-4xl font-bold">Md Morad Hossain <span className="text-sm">(CEO & Founder)</span></h1>
                                     <p className="pt-2 pb-4">Web developer and Digital Marketing Specialist</p>
                                 </div>
                             </div>
@@ -44,7 +44,7 @@ const Resume = () => {
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
                                             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                                         </svg>
-                                        <span>+880 1576 580080</span>
+                                        <span>+1 (424) 244-1035</span>
                                     </p>
                                     <p className="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
@@ -220,15 +220,15 @@ https://i.ibb.co.com/xq5H9sP1/Experienced-and-energetic-social-media-marketing-m
                             <div className="flex gap-2 mb-2">
                                 <GiGraduateCap className="text-2xl text-blue-600" />
                                 <div>
-                                    <h3>Govt Bangla College</h3>
-                                    <p>2000- 2002</p>
+                                    <h3 className="font-semibold">Govt Bangla College</h3>
+                                    <p>Higher Secondary Certificate</p>
                                 </div>
                             </div>
                             <div className="flex gap-2">
                                 <GiGraduateCap className="text-2xl text-blue-600" />
                                 <div>
-                                    <h3>East West University</h3>
-                                    <p>2002- 2006</p>
+                                    <h3 className="font-semibold">East West University</h3>
+                                    <p>Bachelor’s in Computer Science & Engineering</p>
                                 </div>
                             </div>
                         </div>

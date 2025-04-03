@@ -3,6 +3,7 @@ import { IoCartOutline } from "react-icons/io5";
 import LeftRightTop from "./LeftRightTop";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react"
 
 const LeftSide = () => {
     return (
@@ -17,11 +18,22 @@ const LeftSide = () => {
                 </div>
                 {/* লম্বালম্বি লেখা */}
                 <div className="hidden md:block pt-4">
-                <div className="  flex flex-col text-xl font-bold items-center md:text-2xl bg-gradient-to-r from-red-700 via-blue-500 to-violet-600 text-transparent bg-clip-text animate-gradient bg-300%">
-                    {"Web Developer".split("").map((char, index) => (
+                <motion.div animate={{
+                         y:[0,20,0],
+                color:['#FF0000', '#008000', '#FFC300']
+            }}
+            
+            transition={{
+                duration: 5,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 0,
+            }} className="  flex flex-col text-xl font-bold items-center md:text-xl bg-gradient-to-r from-red-700 via-blue-500 to-violet-600 text-transparent bg-clip-text animate-gradient bg-300%">
+                    {"Web Flex Code".split("").map((char, index) => (
                         <span key={index}>{char}</span>
                     ))}
-                </div>
+                </motion.div>
                 </div>
             </div>
 

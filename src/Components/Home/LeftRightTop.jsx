@@ -7,17 +7,16 @@ import { PiHandsClappingDuotone } from "react-icons/pi";
 const LeftRightTop = () => {
     return (
         <div>
-            <div className="flex flex-row md:flex-col items-center justify-center px-2">
+            <div className="flex flex-row md:flex-col items-center justify-center px-2 gap-1">
                 <div className="avatar ">
-                    <div className="w-20 md:w-24 rounded-full relative">
-                        <img src="https://i.ibb.co.com/018RbZs/Experienced-and-energetic-social-media-manager-and-SEO-specialists.jpg
-https://i.ibb.co.com/xq5H9sP1/Experienced-and-energetic-social-media-marketing-manager-and-SEO-specialists.jpg" />
+                    <div className="w-20 md:w-[88px]  overflow-hidden rounded-full relative">
+                        <img className="scale-150" src="https://i.ibb.co.com/xWmHTfg/wev-developer.jpg" />
                     </div>
-                    <div className="border p-1 rounded-full bg-white absolute -right-1 bottom-2 text-xl"><PiHandsClappingDuotone /></div>
+                    <div className="border p-1 rounded-full bg-white absolute -right-2 top-2 text-xl"><PiHandsClappingDuotone /></div>
                 </div>
-                <div>
-                    <h3 className='font-bold bg-gradient-to-r from-red-700 via-blue-500 to-yellow-400 text-transparent bg-clip-text animate-gradient bg-300%'>Md Morad Hossain</h3>
-                    <h3 className="mb-2">Web Developer and Digital Marketing Specialist</h3>
+                <div className="md:space-y-1">
+                    <h3 className='font-bold bg-gradient-to-r from-red-700 via-blue-500 to-green-600 text-transparent bg-clip-text animate-gradient bg-300% text-xl md:text-2xl'>Web Flex Code</h3>
+                    <h3 className="mb-2">Web Development and Digital Marketing Agency</h3>
                     {/* Social icons */}
                     <div className="flex gap-2 justify-center items-center">
                         <Link to='https://www.facebook.com/WebFlexCode' title="Facebook" target="_blank" className="socialBtnHover"><div className="socialIcon">  <CiFacebook /></div></Link>
@@ -28,7 +27,7 @@ https://i.ibb.co.com/xq5H9sP1/Experienced-and-energetic-social-media-marketing-m
                     </div>
                 </div>
             </div>
-            <div className="divider px-3"></div>
+            <div className="divider my-2 px-3"></div>
         </div>
     );
 };

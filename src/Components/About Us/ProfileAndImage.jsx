@@ -4,15 +4,16 @@ import { Link } from 'react-router-dom';
 import Experience from './Experience';
 import { motion } from "motion/react"
 
-
 const ProfileAndImage = () => {
+ 
     return (
         <div>
+          
             <div className='grid grid-cols-1 md:grid-cols-3 gap-2 items-center min-h-[90vh]'>
                 <div className='space-y-2 md:space-y-4 md:col-span-2'>
-                    <h1 className='text-2xl typing-text font-bold inline-block'>Hi, I am freelancer</h1>
-                    <h2 className='text-3xl md:text-5xl font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient bg-300% uppercase'>Developer and Designer</h2>
-                    <p className='md:pb-4'>I'm a software engineer specializing in scalable web apps. Explore my <Link className='text-blue-600'>blog</Link>, <Link className='text-blue-600'>project portfolio</Link> and <Link className='text-blue-600'>online resume</Link>.</p>
+                    <h1 className='text-2xl  font-bold inline-block'>Welcome To Our Agency</h1>
+                    <h2 className='text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient bg-300%  '>Design, Development and Digital Marketing Solutions here</h2>
+                    <p className='md:pb-4'><span className='font-bold'>Web Flex Code</span> is a performance-focused web development and digital marketing company committed to assisting businesses in growing online. We are experts in creating high-performance websites and implementing strategic marketing campaigns that generate traffic, engagement, and conversions. Whether you require a stylish website, SEO optimization, or social media growth, we provide solutions that make a difference. Let's grow your business to the next level! <Link to='/blogs' className='text-blue-600'>blog</Link>, <Link to='/portfolio' className='text-blue-600'>project portfolio</Link> and <Link to='/resume' className='text-blue-600'>online resume</Link>.</p>
                     <div className="flex gap-2 ">
                         <Link href="#_" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium bg-[#5271ff]  text-white inline-block ">
                             <span className="btnPortfolio"></span>
@@ -25,9 +26,24 @@ const ProfileAndImage = () => {
                     </div>
                 </div>
                 <div className='flex justify-end col-span-1 '>
-                    <div className=' bg-[#5271ff] p-1 rounded-md'>
+                    <motion.div  animate={{
+                         y:[0,20,0],
+                // scale: [1, 1.05, 1, 0.9, 1],
+                // rotate: [0, 0, 0, 0],
+                borderRadius: ["0%", "0%", "50%", "50%", "0%"], 
+                colorAdjust:['#FF0000', '##008000', '#FFC300']
+            }}
+            
+            transition={{
+                duration: 5,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 0,
+            }}
+                    className=' bg-[#5271ff] p-1 rounded-md'>
                         <img className='md:w-[300px] md:h-[360px] rounded-md' src="https://i.ibb.co.com/bmBZdVT/Portable-Electric-Kettle.jpg" alt="" />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             <Experience></Experience>

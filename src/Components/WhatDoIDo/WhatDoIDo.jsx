@@ -8,7 +8,7 @@ const WhatDoIDo = () => {
         <div className='my-8'>
             <div className='grid grid-cols-1 md:grid-cols-4 justify-between items-center'>
                 <div className='col-span-3'>
-                <CommonTitle title={'What I do'} description={`I have more than 10 years experience building software for clients all over the world. Below is a quick overview of my main technical skill sets and technologies I use. Want to find out more about my experience? Check out my online resume andproject portfolio.`}></CommonTitle>
+                <CommonTitle title={'What I do'} description={`I help businesses grow via web development and online marketing. I create fast, responsive websites using the MERN stack and create SEO-driven marketing campaigns for better visibility, lead generation, and engagement at Web Flex Code. From a high-performing website to a strong online presence, I deliver results that matter.`}></CommonTitle>
                 </div>
                 <div className="flex justify-end">
                     <Link href="#_" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium bg-[#5271ff]  text-white inline-block ">

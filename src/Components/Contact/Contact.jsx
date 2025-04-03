@@ -27,8 +27,8 @@ const Contact = () => {
                 <title>Contact Us | My Portfolio website</title>
             </Helmet>
             <div className="flex flex-col items-center py-8 md:w-3/4 mx-auto text-center space-y-4">
-                <h1 className="text-2xl font-semibold">Contact</h1>
-                <p className="">Interested in hiring me for your project or just want to say hi? You can fill in the contact form below or send me an email to <Link className="text-blue-600">evans@yourwebsite.com</Link> .Want to get connected? Follow me on the social channels below.</p>
+                <h1 className="text-3xl font-bold">Contact</h1>
+                <p className="">Interested in hiring Us for your project or just want to say hi? You can fill in the contact form below or send me an email to <Link className="text-blue-600">evans@yourwebsite.com</Link> .Want to get connected? Follow us on the social channels below.</p>
                 <div className="">
                     <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
                         <div className="flex gap-2 justify-center text-2xl">
@@ -41,10 +41,12 @@ const Contact = () => {
                 </div>
             </div>
             <hr />
+            
+            <hr />
             {/* Contacts details */}
             <div className='grid grid-cols-1 md:grid-cols-4 justify-between items-center py-2 md:py-8'>
                 <div className='col-span-3'>
-                    <CommonTitle title={'Contact Details'} description={'If you are going to use a passage of Lorem Ipsum, you need to be sure there is not anything embarrassing hidden in the middle of text'}></CommonTitle>
+                    <CommonTitle title={'Contact Details'} description={"We'd love to hear from you! Whether you have questions about our services, need more information, or want to discuss a new project, don't hesitate to reach out. Our team is just a message away from helping you achieve your business goals"}></CommonTitle>
                 </div>
 
             </div>
@@ -54,8 +56,8 @@ const Contact = () => {
                 <div className="flex gap-1 items-center  border-s-2 border-blue-600">
                     <IoIosPhonePortrait className="text-3xl md:text-5xl text-blue-600 ml-2" />
                     <div className="space-y-1 md:space-y-2">
-                        <h3 className="font-semibold text-xl">Phone</h3>
-                        <h3>+880 1576 580080</h3>
+                        <h3 className="font-semibold text-xl">Whatsapp</h3>
+                        <h3>+1 (424) 244-1035</h3>
                     </div>
                 </div>
                 {/* 2nd */}
@@ -83,12 +85,12 @@ const Contact = () => {
             {/* Get in Touch */}
             <div className='grid grid-cols-1 md:grid-cols-4 justify-between items-center py-2 md:py-8'>
                 <div className='col-span-3'>
-                    <CommonTitle title={'Get In Touch'} description={'If you are going to use a passage of Lorem Ipsum, you need to be sure there is not anything embarrassing hidden in the middle of text.'}></CommonTitle>
+                    <CommonTitle title={'Get In Touch'} description={"Ready to take your business to the next level? Whether you're interested in our web development services, digital marketing strategies, or need help with a project, we're excited to hear from you. Fill out the form, and one of our experts will contact you shortly!"}></CommonTitle>
                 </div>
 
             </div>
             {/* form */}
-            <section className="p-6 ">
+            <section className="md:p-4 ">
                 <form onSubmit={handleSendMessage} noValidate="" action="" className="container flex flex-col mx-auto space-y-4">
                     <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                         <div className="col-span-full sm:col-span-3">

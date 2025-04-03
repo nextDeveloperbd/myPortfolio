@@ -1,75 +1,105 @@
 [
-    {
-      "image": "https://example.com/image1.jpg",
-      "title": "Web Development",
-      "icon": "💻",
-      "category": "Technology",
-      "features": [
-        { "button1": "Full-Stack Development" },
-        { "button2": "User Experience" },
-        { "button3": "Bug Fixing" }
-      ],
-      "icon_button": "🔗"
-    },
-    {
-      "image": "https://i.ibb.co.com/RpLpjtVP/Add-campaign-result.jpg",
-      "title": "Social Media Marketing",
-      "icon": "📢",
-      "category": "Marketing",
-      "features": [
-        { "button1": "Ad Campaigns" },
-        { "button2": "Engagement Boost" },
-        { "button3": "Analytics Tracking" }
-      ],
-      "icon_button": "🔗"
-    },
-    {
-      "image": "https://example.com/image3.jpg",
-      "title": "Graphic Design",
-      "icon": "🎨",
-      "category": "Design",
-      "features": [
-        { "button1": "Creative Banners" },
-        { "button2": "Brand Guidelines" },
-        { "button3": "3D Graphics" }
-      ],
-      "icon_button": "🔗"
-    },
-    {
-      "image": "https://example.com/image4.jpg",
-      "title": "E-commerce Solutions",
-      "icon": "🛒",
-      "category": "Business",
-      "features": [
-        { "button1": "Store Setup" },
-        { "button2": "Secure Checkout" },
-        { "button3": "Abandoned Cart Recovery" }
-      ],
-      "icon_button": "🔗"
-    },
-    {
-      "image": "https://example.com/image5.jpg",
-      "title": "Email Marketing",
-      "icon": "📧",
-      "category": "Marketing",
-      "features": [
-        { "button1": "Drip Campaigns" },
-        { "button2": "Segmentation" },
-        { "button3": "Email Templates" }
-      ],
-      "icon_button": "🔗"
-    },
-    {
-      "image": "https://example.com/image6.jpg",
-      "title": "SEO Optimization",
-      "icon": "🔍",
-      "category": "Marketing",
-      "features": [
-        { "button1": "Local SEO" },
-        { "button2": "Schema Markup" },
-        { "button3": "Mobile SEO" }
-      ],
-      "icon_button": "🔗"
-    }
-  ]
-  
+  {
+    "image": "https://i.ibb.co.com/web-design.jpg",
+    "title": "Web Design Services",
+    "icon": "🎨",
+    "category": "Web Design",
+    "plan": "Professional Plan",
+    "price": "$199",
+    "features": [
+      "Responsive Design",
+      "UI/UX Optimization",
+      "Custom Graphics",
+      "SEO-Friendly Design",
+      "Fast Loading Speed",
+      "Mobile Compatibility"
+    ],
+    "icon_button": "🔗"
+  },
+  {
+    "image": "https://i.ibb.co.com/ecommerce.jpg",
+    "title": "Ecommerce Website Development",
+    "icon": "🛒",
+    "category": "Ecommerce",
+    "plan": "Enterprise Plan",
+    "price": "$499",
+    "features": [
+      "Product Management System",
+      "Payment Gateway Integration",
+      "Secure Checkout",
+      "Inventory Management",
+      "User-Friendly Navigation",
+      "SEO Optimized Store"
+    ],
+    "icon_button": "🔗"
+  },
+  {
+    "image": "https://i.ibb.co.com/RpLpjtVP/Add-campaign-result.jpg",
+    "title": "Facebook & Google Ads Campaign",
+    "icon": "📢",
+    "category": "Facebook",
+    "plan": "Marketing Plan",
+    "price": "$49",
+    "features": [
+      "Post Engagement/Page Like",
+      "Website Traffic",
+      "Brand Awareness/Reach",
+      "Conversion",
+      "Message",
+      "Video Views"
+    ],
+    "icon_button": "🔗"
+  },
+  {
+    "image": "https://example.com/image3.jpg",
+    "title": "Social Media Marketing & Management",
+    "icon": "🎨",
+    "category": "Social Media",
+    "label": "Beginner",
+    "plan": "Elite Plan",
+    "price": "$59",
+    "features": [
+      "Content Strategy",
+      "Organic Growth",
+      "Engagement & Interaction",
+      "Influencer Marketing",
+      "Analytics & Reporting",
+      "Ad Campaign Management"
+    ],
+    "icon_button": "🔗"
+  },
+  {
+    "image": "https://i.ibb.co.com/seo.jpg",
+    "title": "Search Engine Optimization (SEO)",
+    "icon": "🔍",
+    "category": "SEO",
+    "plan": "Advanced Plan",
+    "price": "$99",
+    "features": [
+      "On-Page SEO",
+      "Off-Page SEO",
+      "Keyword Research",
+      "Technical SEO",
+      "Backlink Building",
+      "Content Optimization"
+    ],
+    "icon_button": "🔗"
+  },
+  {
+    "image": "https://i.ibb.co.com/youtube.jpg",
+    "title": "YouTube Marketing",
+    "icon": "🎥",
+    "category": "YouTube",
+    "plan": "Master Plan",
+    "price": "$99",
+    "features": [
+      "Video SEO Optimization",
+      "Thumbnail & Titles",
+      "Channel Growth Strategy",
+      "YouTube Ads Management",
+      "Audience Engagement",
+      "Monetization Strategies"
+    ],
+    "icon_button": "🔗"
+  }
+]

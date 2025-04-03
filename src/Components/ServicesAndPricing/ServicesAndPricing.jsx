@@ -14,11 +14,11 @@ const ServicesAndPricing = () => {
             </Helmet>
             <div className="flex flex-col items-center py-8 w-3/4 mx-auto text-center space-y-4">
                 <h1 className="text-2xl font-semibold">Services & Pricing</h1>
-                <p className="">I have 10+ years of development experience building software for the web and mobile devices. You can take a look at my online resume and project portfolio to find out more about my skills and experiences.</p>
+                <p className="">We have 3+ years of development experience building software for the web and mobile devices. You can take a look at my online resume and project portfolio to find out more about my skills and experiences.</p>
                 <div className="">
                     <Link to="/contact" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium bg-[#5271ff]  text-white inline-block ">
                         <span className="hireBtn"></span>
-                        <span className="relative group-hover:text-white flex items-center gap-2"><FaLocationArrow />Hire Me</span>
+                        <span className="relative group-hover:text-white flex items-center gap-2"><FaLocationArrow />Contact Us</span>
                     </Link>
                 </div>
             </div>
