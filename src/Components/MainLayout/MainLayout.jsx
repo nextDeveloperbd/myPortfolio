@@ -7,7 +7,7 @@ const MainLayout = () => {
     return (
 
         <div className=" grid grid-cols-1 md:grid-cols-5 ">
-            <div className="md:col-span-1 md:h-screen md:sticky md:top-0 ">
+            <div className="md:col-span-1 md:h-screen md:sticky md:-top-10 ">
                 <LeftSide></LeftSide>
             </div>
             <div className="md:col-span-4 ">

@@ -16,7 +16,7 @@ const ServicesAndPricing = () => {
                 <h1 className="text-2xl font-semibold">Services & Pricing</h1>
                 <p className="">We have 3+ years of development experience building software for the web and mobile devices. You can take a look at my online resume and project portfolio to find out more about my skills and experiences.</p>
                 <div className="">
-                    <Link to="/contact" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium bg-[#5271ff]  text-white inline-block ">
+                    <Link to="/contact" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium contactBtn text-white inline-block ">
                         <span className="hireBtn"></span>
                         <span className="relative group-hover:text-white flex items-center gap-2"><FaLocationArrow />Contact Us</span>
                     </Link>

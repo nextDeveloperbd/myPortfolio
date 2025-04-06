@@ -29,12 +29,6 @@ const TeamMembers = () => {
                         <p className="">{member?.designation}</p>
                         <p>{member?.education}</p>
                         <p>{member?.university}</p>
-                        {
-                            member.socialLink?<a href={member?.socialLink} target='_blank' className='hover:bg-sky-600 hover:text-white duration-300 text-blue-700 font-semibold px-2 py-1 border rounded-md inline-block mt-1'>
-                            <button>Social Links</button>
-                            </a> : ''
-                        }
-                        
                     </div>
                 </div>
             </div>)
@@ -46,15 +40,11 @@ const TeamMembers = () => {
                         <div className="">
                             <img className="w-20 h-20 mx-auto rounded-full object-cover" src={member?.img_url ?member.img_url: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} alt="" />
                         </div>
-                        <div className=" text-center">
+                        <div className=" text-center space-y-1">
                             <h2 className="text-xl font-semibold">{member?.name}</h2>
                             <p className="">{member?.designation}</p>
                             <p>{member?.jobTitle}</p>
-                            {
-                            member?.socialLink?<a href={member?.socialLink} target='_blank' className='hover:text-[#1a3c3d] duration-300 text-blue-700 font-semibold px-2 py-1 inline-block mt-1'>
-                            <button>Social Link</button>
-                            </a> : ''
-                        }
+                          
                         </div>
                     </div>)
                 }

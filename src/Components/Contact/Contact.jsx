@@ -6,6 +6,7 @@ import { IoIosPhonePortrait } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineEmail } from "react-icons/md";
 import { Helmet } from "react-helmet-async";
+import axios from "axios";
 
 
 const Contact = () => {
@@ -18,6 +19,11 @@ const Contact = () => {
         const message = e.target.message.value;
         const contactDetails = { name, email, phone, location, message }
         console.log(contactDetails);
+        axios.post('http://localhost:5000/message', contactDetails)
+        .then(res => {
+            console.log(res.data);
+            // maingun api key:  9feddaae8d02c2837314824f6f87335d-24bda9c7-72fe1d7b
+        })
 
 
     }
@@ -115,7 +121,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div>
-                        <button type="submit" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium bg-[#5271ff]  text-white  ">
+                        <button type="submit" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium contactBtn  text-white  ">
                             <span className="absolute bottom-0 left-0 h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
                             <span className="relative group-hover:text-white flex items-center gap-2">Send Message</span>
                         </button>

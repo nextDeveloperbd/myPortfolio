@@ -1,0 +1,35 @@
+[
+    {
+      "img_url": "https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg?semt=ais_hybrid&w=740",
+      "title": "Wireless Bluetooth Earbuds",
+      "description": "Noise-cancelling earbuds with 24-hour battery life and touch controls.",
+      "price": "49.99",
+      "addToCart": "Add to Cart",
+      "buyNow": "Buy Now"
+    },
+    {
+      "img_url": "https://media.istockphoto.com/id/1356364287/photo/close-up-focus-on-persons-hands-typing-on-the-desktop-computer-backlit-keyboard-screens-show.jpg?s=612x612&w=0&k=20&c=ijjq-DLNxIaPuGvIX8k06IZxMAjGpyJeboaV_byCX9k=",
+      "title": "Fitness Smart Watch",
+      "description": "Track your heart rate, steps, and sleep with this stylish waterproof smartwatch.",
+      "price": "89.00",
+      "addToCart": "Add to Cart",
+      "buyNow": "Buy Now"
+    },
+    {
+      "img_url": "https://www.michaelpage.ae/sites/michaelpage.ae/files/legacy/7_digital_skills600x387.png",
+      "title": "Portable Bluetooth Speaker",
+      "description": "Compact and powerful speaker with deep bass and up to 12 hours playtime.",
+      "price": "39.95",
+      "addToCart": "Add to Cart",
+      "buyNow": "Buy Now"
+    },
+    {
+      "img_url": "https://example.com/images/phone-holder.jpg",
+      "title": "360° Rotating Phone Holder",
+      "description": "Adjustable desktop phone stand, ideal for video calls and streaming.",
+      "price": "12.50",
+      "addToCart": "Add to Cart",
+      "buyNow": "Buy Now"
+    }
+  ]
+  

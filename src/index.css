@@ -4,7 +4,7 @@
 
 
 a.active{
-  background-color:#5271ff;
+  background-color:#1a3c3d;
   border-radius: 6px;
   color: white;
 }
@@ -21,7 +21,10 @@ a.active{
   @apply absolute bottom-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90
 }
 /* Profile and image */
-
+/* Contact button */
+.contactBtn{
+  @apply bg-[#1a3c3d]
+}
 .btnPortfolio{
   @apply absolute bottom-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90
 }

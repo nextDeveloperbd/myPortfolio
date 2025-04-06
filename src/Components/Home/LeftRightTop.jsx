@@ -3,10 +3,15 @@ import { FaGithub, FaInstagram } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { PiHandsClappingDuotone } from "react-icons/pi";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const LeftRightTop = () => {
+    const { user} = useContext(AuthContext);
+    
     return (
         <div>
+                <h3>Welcome: <span className="font-semibold">{user? user?.displayName: ''}</span></h3>
             <div className="flex flex-row md:flex-col items-center justify-center px-2 gap-1">
                 <div className="avatar ">
                     <div className="w-20 md:w-[88px]  overflow-hidden rounded-full relative">

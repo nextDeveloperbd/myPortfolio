@@ -29,11 +29,11 @@ const TabsList = () => {
                         {
                             portfolios?.map(portfolio => <div key={portfolio._id} className="portfolioHove">
                                 <figure>
-                            <img className="border border-gray-400  hover:border hover:border-white h-96 w-full " src={portfolio?.img_url} alt="" />
+                            <img className="border border-gray-400  hover:border hover:border-white md:h-72 w-full " src={portfolio?.img_url} alt="" />
                         </figure>
-                                <div className="flex gap-2 mt-4 px-3">
+                                <div className="flex gap-2 mt-4 px-1 md:px-3">
                                     {
-                                        portfolio?.category?.map((cat,idx) => <div key={idx}  className="px-5 py-2 rounded-full relative group overflow-hidden font-medium   inline-block border border-black">
+                                        portfolio?.category?.map((cat,idx) => <div key={idx}  className="px-1 md:px-5 py-1 md:py-2 rounded-full relative group overflow-hidden font-medium inline-block border border-black">
                                             <span className="absolute bottom-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 "></span>
                                             <span className=" flex items-center gap-2">{cat}</span>
                                         </div>)

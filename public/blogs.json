@@ -1,0 +1,45 @@
+[
+    {
+      "img_url": "https://www.creativeitinstitute.com/images/course/course_1663052056.jpg",
+      "title": "Top 5 Strategies for Organic Instagram Growth",
+      "category": ["Social Media", "Marketing", "Growth"],
+      "description": "Learn how to increase your Instagram reach and engagement organically with these expert tips.",
+      "post_date": "2025-04-04"
+    },
+    {
+      "img_url": "https://example.com/images/web-dev-trends.jpg",
+      "title": "Web Development Trends to Watch in 2025",
+      "category": ["Web Development", "Technology", "Trends"],
+      "description": "Stay ahead in web development by learning about the latest trends shaping the industry.",
+      "post_date": "2025-04-02"
+    },
+    {
+      "img_url": "https://example.com/images/digital-marketing-strategies.jpg",
+      "title": "Best Digital Marketing Strategies for Business Growth",
+      "category": ["Digital Marketing", "SEO", "Branding"],
+      "description": "Discover powerful digital marketing strategies that can help businesses scale in 2025.",
+      "post_date": "2025-03-30"
+    },
+    {
+      "img_url": "https://example.com/images/facebook-ads.jpg",
+      "title": "How to Run High-Converting Facebook Ads",
+      "category": ["Social Media", "Advertising", "Marketing"],
+      "description": "A step-by-step guide to creating Facebook ads that drive engagement and sales.",
+      "post_date": "2025-03-28"
+    },
+    {
+      "img_url": "https://example.com/images/web-dev-tools.jpg",
+      "title": "Top 10 Web Development Tools for Developers",
+      "category": ["Web Development", "Software", "Productivity"],
+      "description": "Enhance your development workflow with these essential tools for web developers.",
+      "post_date": "2025-03-25"
+    },
+    {
+      "img_url": "https://example.com/images/seo-growth.jpg",
+      "title": "SEO Techniques to Boost Website Rankings in 2025",
+      "category": ["Digital Marketing", "SEO", "Traffic Growth"],
+      "description": "Implement these SEO strategies to improve your website’s ranking on search engines.",
+      "post_date": "2025-03-22"
+    }
+  ]
+
