@@ -11,8 +11,10 @@ const ServicesAndPricing = () => {
         <div>
             <Helmet>
                 <title>Servicing and Pricing | My Portfolio website</title>
+                <meta name="description" content="This is your page description for SEO." />
+                <meta name="keywords" content="react, seo, meta tags, your-keywords-here" />
             </Helmet>
-            <div className="flex flex-col items-center py-8 w-3/4 mx-auto text-center space-y-4">
+            <div className="flex flex-col items-center md:py-8 py-2 md:w-3/4 mx-auto text-center space-y-4">
                 <h1 className="text-2xl font-semibold">Services & Pricing</h1>
                 <p className="">We have 3+ years of development experience building software for the web and mobile devices. You can take a look at my online resume and project portfolio to find out more about my skills and experiences.</p>
                 <div className="">

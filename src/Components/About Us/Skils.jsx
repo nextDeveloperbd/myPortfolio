@@ -1,33 +1,26 @@
-import { FaJsSquare } from "react-icons/fa";
+
+import { useEffect, useState } from "react";
+import UseAxiosSecure from "../Hook/UseAxiosSecure";
 
 const Skils = () => {
+    const[skills, setSkills] = useState([])
+         const axiosSecure = UseAxiosSecure()
+            
+           useEffect(()=>{
+            axiosSecure.get(`/serviceCart`)
+            .then(res =>{
+                setSkills(res.data)        
+            })
+           },[]);
     return (
-        <div className="my-8 grid grid-cols-1 md:grid-cols-3 gap-2">
-            <div className="border p-6  space-y-2 hover:bg-white hover:shadow-2xl hover:border-[#5271ff] duration-500">
-            <FaJsSquare  className="text-2xl"/>
-                <h2 className="text-xl font-semibold">Vanilla JavaScript</h2>
-                <p>List skills and technologies here. Customize as needed. Built on HTML5, Sass, and Bootstrap 5.</p>
-            </div>
-            <div className="border p-6  space-y-2 hover:bg-white hover:shadow-2xl hover:border-[#5271ff] duration-500">
-            <FaJsSquare  className="text-2xl"/>
-                <h2 className="text-xl font-semibold">Angular, React & Vue</h2>
-                <p>List skills and technologies here. Customize as needed. Built on HTML5, Sass, and Bootstrap 5.</p>
-            </div>
-            <div className="border p-6  space-y-2 hover:bg-white hover:shadow-2xl hover:border-[#5271ff] duration-500">
-            <FaJsSquare  className="text-2xl"/>
-                <h2 className="text-xl font-semibold">Node.js</h2>
-                <p>List skills and technologies here. Customize as needed. Built on HTML5, Sass, and Bootstrap 5.</p>
-            </div>
-            <div className="border p-6  space-y-2 hover:bg-white hover:shadow-2xl hover:border-[#5271ff] duration-500">
-            <FaJsSquare  className="text-2xl"/>
-                <h2 className="text-xl font-semibold">Vanilla JavaScript</h2>
-                <p>List skills and technologies here. Customize as needed. Built on HTML5, Sass, and Bootstrap 5.</p>
-            </div>
-            <div className="border p-6  space-y-2 hover:bg-white hover:shadow-2xl hover:border-[#5271ff] duration-500">
-            <FaJsSquare  className="text-2xl"/>
-                <h2 className="text-xl font-semibold">Vanilla JavaScript</h2>
-                <p>List skills and technologies here. Customize as needed. Built on HTML5, Sass, and Bootstrap 5.</p>
-            </div>
+        <div className="my-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+            {
+                skills?.map(skill => <div key={skill._id} className="serviceCart">
+                    <img src={skill?.img_url} alt={skill?.title} className="w-12 h-12" />
+                        <h2 className="text-xl font-semibold">{skill?.title}</h2>
+                        <p>{skill?.description}</p>
+                    </div>)
+            }
         </div>
     );
 };

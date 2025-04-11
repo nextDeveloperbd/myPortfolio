@@ -1,16 +1,18 @@
 
 import CommonTitle from "../Commont Title/CommonTitle";
 import { useEffect, useState } from "react";
-import axios from "axios";
-
+import UseAxiosSecure from "../Hook/UseAxiosSecure";
 
 const Faq = () => {
     const[faqs, setFaqs] = useState([])
+    const axiosSecure = UseAxiosSecure()
     useEffect(()=>{
-        axios.get('https://portfolio-server-psi-six.vercel.app/faq')
+        axiosSecure.get('/faq')
         .then(res => {
-            setFaqs(res.data)
-            
+            setFaqs(res.data)            
+        })
+        .catch(error => {
+            console.log(error.message);                
         })
     },[]);
     
@@ -20,12 +22,10 @@ const Faq = () => {
                 <div className='col-span-3'>
                     <CommonTitle title={'Have any questions?'} description={`You can use this section to address any queries your potential clients may have.`}></CommonTitle>
                 </div>
-
             </div>
             {/* Accordian */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 my-12">
                 {/* left div */}
-
                 <div>
                     {
                         faqs?.map(faq=> <div key={faq._id} className="collapse collapse-plus bg-base-100 border border-base-300 m-1">
@@ -33,8 +33,7 @@ const Faq = () => {
                             <div className="collapse-title font-semibold">{faq.question}</div>
                             <div className="collapse-content text-sm">{faq.answer}</div>
                         </div>)
-                    }
-                   
+                    }                   
                 </div>
                 {/* right div */}
                 <div className="flex justify-center items-center">

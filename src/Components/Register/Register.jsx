@@ -8,10 +8,12 @@ import Hooks from "../Hook/Hooks";
 import Lottie from "lottie-react";
 import register from '../../assets/Registration file.json'
 import { Helmet } from "react-helmet-async";
+import UseAxiosPublic from "../Hook/UseAxiosPublic";
 
 
 const Register = () => {
-	const { createUser, setUser, updateUserProfile,logOut } = Hooks()
+	const axiosPublic = UseAxiosPublic()
+	const { createUser, setUser, updateUserProfile, logOut } = Hooks()
 	const [error, setError] = useState('');
 	const [passError, setPassError] = useState('')
 	const [termsError, setTermsError] = useState('')
@@ -54,42 +56,53 @@ const Register = () => {
 		else if (password !== confirmPassword) {
 			setPassError('Password does not match')
 			return
-		} 
+		}
 		else if (!terms) {
 			setTermsError("Please accept terms and conditions");
 			return;
 		}
-		 else {
+		else {
 			toast.success("Registration successfull");
 		}
 
 		const regUserData = { name, email, password, confirmPassword }
-console.log(regUserData);
+		console.log(regUserData);
 
 		// Create user
-		 createUser(email, password)
+		createUser(email, password)
 			.then(result => {
 				const newUser = result.user;
+				console.log(newUser);
 				setUser(newUser)
+				// update profile
 				updateUserProfile(name, email)
-				.then(()=>{
-					toast.success('Registration successful');
-					logOut()
-					.then(()=>{
-						navigate('/login')
-					})					
-				})
-				// navigate(location?.state ? location.state : '/') 
+					.then(() => {
+						const userInfo = {
+							name: name, email: email
+						}
+						axiosPublic.post('/users', userInfo)
+							.then(res => {
+								console.log(res.data);
+								if (res.data.insertedId) {
+									toast.success('Registration successful');
+									logOut()
+										.then(() => {
+											navigate('/login')
+										})
+								}
+
+							})
+					})
 			})
 			.catch(error => {
 				setError(error.message)
-			}) 
+			})
 	};
 
 	return (
 		<div>
-			 <Helmet>
-					<title>Sign Up | My Portfolio website</title>
+			<Helmet>
+				<title>Sign Up | My Portfolio website</title>
 			</Helmet>
 			<div className="w-full p-2 md:p-6 space-y-1 rounded-xl mx-auto my-2">
 				<h3 className="text-center text-red-500">{error.split(':')[1]}</h3>
@@ -132,30 +145,30 @@ console.log(regUserData);
 							{/* password field */}
 							<div className="flex flex-col md:flex-row md:justify-between gap-2">
 								{/* Password */}
-							<div className="space-y-1 text-sm relative w-full">
-								<div className="flex justify-between">
-									<label htmlFor="password" className="block ">Password</label>
-									
+								<div className="space-y-1 text-sm relative w-full">
+									<div className="flex justify-between">
+										<label htmlFor="password" className="block ">Password</label>
+
+									</div>
+									<input type={showPassword ? 'text' : 'password'} name="password" id="password" placeholder="Exp: Aa123#?!@$%^&*-" className="w-full px-4 py-3 rounded-md border border-[#1a3c3d] focus:border-violet-400" />
+									<span
+										onClick={() => setShowPassword(!showPassword)}
+										className="absolute bottom-[15px] right-4"
+									>{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+									</span>
 								</div>
-								<input type={showPassword ? 'text' : 'password'} name="password" id="password" placeholder="Exp: Aa123#?!@$%^&*-" className="w-full px-4 py-3 rounded-md border border-[#1a3c3d] focus:border-violet-400" />
-								<span
-									onClick={() => setShowPassword(!showPassword)}
-									className="absolute bottom-[15px] right-4"
-								>{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
-								</span>
-							</div>
 
-							{/* Confirm Password */}
-							<div className="space-y-1 text-sm relative w-full">
-								<label htmlFor="confirmPassword" className="block ">Confirm Password</label>
-								<input type={confirmShowPassword ? 'text' : 'password'} name="confirmPassword" id="confirmPassword" placeholder="confirmPassword" className="w-full px-4 py-3 rounded-md border border-[#1a3c3d] focus:border-violet-400" />
-								<span
-									onClick={() => setConfirmShowPassword(!confirmShowPassword)}
-									className="absolute bottom-[15px] right-4"
-								>{confirmShowPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
-								</span>
+								{/* Confirm Password */}
+								<div className="space-y-1 text-sm relative w-full">
+									<label htmlFor="confirmPassword" className="block ">Confirm Password</label>
+									<input type={confirmShowPassword ? 'text' : 'password'} name="confirmPassword" id="confirmPassword" placeholder="confirmPassword" className="w-full px-4 py-3 rounded-md border border-[#1a3c3d] focus:border-violet-400" />
+									<span
+										onClick={() => setConfirmShowPassword(!confirmShowPassword)}
+										className="absolute bottom-[15px] right-4"
+									>{confirmShowPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+									</span>
 
-							</div>
+								</div>
 							</div>
 							{/* Terms and conditions */}
 							<div className="flex justify-between text-xs dark:text-gray-400">
@@ -165,7 +178,7 @@ console.log(regUserData);
 										Accept terms and conditions
 									</a>
 								</div>
-								
+
 							</div>
 							<button className="block w-full p-3 text-center rounded text-gray-100 bg-[#1a3c3d] cursor-pointer">Sign Up</button>
 						</form>

@@ -3,25 +3,31 @@ import { FaLocationArrow } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './blogs.css'
 import { Helmet } from 'react-helmet-async';
-import axios from 'axios';
+import UseAxiosSecure from '../Hook/UseAxiosSecure';
 
 const Blogs = () => {
-     const[blogs, setBlogs] = useState([])
-                
-               useEffect(()=>{
-                axios.get(`https://portfolio-server-psi-six.vercel.app/blogs`)
-                .then(res =>{
-                    setBlogs(res.data)        
-                })
-               },[]);
+    const [blogs, setBlogs] = useState([])
+    const axiosSecure = UseAxiosSecure()
+    console.log(blogs);
+    useEffect(() => {
+        axiosSecure.get(`/blogs`)
+            .then(res => {
+                setBlogs(res.data)
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }, []);
     return (
         <div>
             <Helmet>
                 <title>Blogs | My Portfolio website</title>
+                <meta name="description" content="This is your page description for SEO." />
+                <meta name="keywords" content="react, seo, meta tags, your-keywords-here" />
             </Helmet>
-            <div className="flex flex-col items-center py-8 md:w-3/4 mx-auto text-center space-y-4">
-                <h1 className="text-2xl font-semibold">A Blog About Software Development And Life</h1>
-                <p className="">Welcome to my blog. Subscribe and get my latest blog post in your inbox.</p>
+            <div className="flex flex-col items-center md:py-8 py-2 md:w-3/4 mx-auto text-center space-y-4">
+                <h1 className="text-2xl font-semibold">A Blog About Web Development And Digital Marketing</h1>
+                <p className="">Welcome to our blogs. Search and get our latest blog post in front of you.</p>
                 <div className="flex flex-col md:flex-row md:justify-between gap-2 items-center w-full">
                     {/* search */}
                     <div className="w-full flex">
@@ -31,7 +37,7 @@ const Blogs = () => {
                     {/* search */}
                     <Link href="#_" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium contactBtn  text-white inline-block ">
                         <span className="absolute bottom-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
-                        <span className="relative group-hover:text-white flex items-center gap-2"><FaLocationArrow />Subscribe</span>
+                        <span className="relative group-hover:text-white flex items-center gap-2">Search</span>
                     </Link>
                 </div>
             </div>
@@ -40,23 +46,26 @@ const Blogs = () => {
             {/* featured card */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4 md:mt-8">
                 {
-                    blogs?.map(blog =>  <div key={blog._id} className="blogCss">
-                        <Link to={`/blogDetails/${blog._id}`}>
-                        <figure>
-                            <img className="border border-gray-400  hover:border hover:border-white md:h-72 w-full " src={blog?.img_url} alt="" />
-                        </figure></Link>
+                    blogs?.map(blog => <div key={blog._id} className="blogCss">
+                        <div>
+                            <figure>
+                                {
+                                    blog?.images?.slice(0, 1).map((image, idx) => <img key={idx} className='w-full h-[160px] object-cover md:h-[320px] mx-auto rounded' src={image} alt={blog?.title} />)
+                                }
+                            </figure></div>
                         <div className="flex gap-2 mt-4 px-1 md:px-3">
-                            <h2>{blog?.post_date}</h2>
-                            <h2>/</h2>
-                            <h2 className='flex flex-wrap md:flex-row gap-1'>{blog?.category ?.map((catego,idx) => <span key={idx} className='text-blue-600'>{catego}</span>)}</h2>
+                            <h2>{blog?.uploadedAt}</h2>
+
                         </div>
                         {/* Title  */}
-                        <div className="flex justify-between px-3 mt-2">
-                            <h2 className="text-2xl font-semibold hover:text-[#5271ff] duration-300">{blog?.title}</h2>
-                        </div>
+                        <Link to={`/blogDetails/${blog._id}`}>
+                            <div className="flex justify-between px-3 mt-2">
+                                <h2 className="text-2xl font-semibold hover:text-[#5271ff] duration-300">{blog?.title}</h2>
+                            </div>
+                        </Link>
                     </div>)
                 }
-           
+
             </div>
             {/* all Blogs end */}
 

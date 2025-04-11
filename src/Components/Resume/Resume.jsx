@@ -297,11 +297,11 @@ https://i.ibb.co.com/xq5H9sP1/Experienced-and-energetic-social-media-marketing-m
                             <h3 className="text-base">/nextDeveloperbd</h3>
                         </div>
                         <div className="flex items-center">
-                            <Link to='https://www.linkedin.com/in/webflexcode/' target="_blank" className="socialBtnHover"><div className="socialIcon"><CiLinkedin /></div></Link>
+                            <Link to='https://www.linkedin.com/company/orbitshift-bd/?viewAsMember=true' target="_blank" className="socialBtnHover"><div className="socialIcon"><CiLinkedin /></div></Link>
                             <h3 className="text-base">/webflexcode</h3>
                         </div>
                         <div className="flex items-center">
-                            <Link to='https://www.instagram.com/webflexcode/' target="_blank" className="socialBtnHover"><div className="socialIcon"> <FaInstagram /></div></Link>
+                            <Link to='https://www.instagram.com/orbitshiftbd/' target="_blank" className="socialBtnHover"><div className="socialIcon"> <FaInstagram /></div></Link>
                             <h3 className="text-base">/webflexcode</h3>
                         </div>
                         <div className="flex items-center">

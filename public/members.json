@@ -9,19 +9,19 @@
       "socialLink": ""
     },
     {
-      "img_url": "https://example.com/image2.jpg",
+      "img_url": "https://i.ibb.co.com/3ybRsG5H/Morad11.jpg",
       "name": "MD Morad Hossain",
       "designation": "Founder & CEO",
       "jobTitle": "Web Developer & Digital Marketing Specialist",
       "education": "",
       "university": "",
-      "socialLink": "https://www.facebook.com/WebFlexCode"
+      "socialLink": "http:/https://www.facebook.com/orbitshiftbd"
     },
     {
       "img_url": "",
-      "name": "KM Mehedi Hasan",
-      "designation": "Co-Founder & CMO",
-      "jobTitle": "Digital Marketing Expert",
+      "name": "Misam Mehzabin",
+      "designation": "Managing Director",
+      "jobTitle": "Digital Marketing Specialist",
       "education": "",
       "university": "",
       "socialLink": ""
@@ -37,13 +37,14 @@
     },
     {
       "img_url": "",
-      "name": "Misam Mehzabin",
-      "designation": "Managing Director",
-      "jobTitle": "Digital Marketing Specialist",
+      "name": "KM Mehedi Hasan",
+      "designation": "Co-Founder & CMO",
+      "jobTitle": "Digital Marketing Expert",
       "education": "",
       "university": "",
       "socialLink": ""
     },
+    
     {
       "img_url": "",
       "name": "Minhaz Sardar",
@@ -85,6 +86,24 @@
       "name": "MD. Rakibul Islam",
       "designation": "Sales Manager",
       "jobTitle": "Social media marketing & management",
+      "education": "",
+      "university": "",
+      "socialLink": ""
+    },
+    {
+      "img_url": "https://i.ibb.co.com/v6nrSvd3/Tanvir-ahmed.jpg",
+      "name": "Tanvir Islam",
+      "designation": "Marketing Manager",
+      "jobTitle": "Google Ads & Wordpress expert",
+      "education": "",
+      "university": "",
+      "socialLink": ""
+    },
+    {
+      "img_url": "https://i.ibb.co.com/mFRnRp0J/Salahuddin-Hossain.png",
+      "name": "Salahuddin Hossain",
+      "designation": "Client Success Manager",
+      "jobTitle": "Instagram marketing",
       "education": "",
       "university": "",
       "socialLink": ""

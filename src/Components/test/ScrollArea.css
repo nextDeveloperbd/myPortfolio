@@ -1,0 +1,24 @@
+.scroll-area {
+    max-height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox scrollbar hidden */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  /* Completely hide scrollbar by default */
+  .scroll-area::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+  
+  .scroll-area::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Show scrollbar on hover */
+  .scroll-area:hover::-webkit-scrollbar-thumb {
+    background-color: #1a3c3d;
+  }
+  

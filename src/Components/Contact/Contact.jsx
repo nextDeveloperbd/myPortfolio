@@ -6,10 +6,11 @@ import { IoIosPhonePortrait } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineEmail } from "react-icons/md";
 import { Helmet } from "react-helmet-async";
-import axios from "axios";
+import UseAxiosSecure from "../Hook/UseAxiosSecure";
 
 
 const Contact = () => {
+    const axiosSecure = UseAxiosSecure();
     const handleSendMessage = e => {
         e.preventDefault()
         const name = e.target.name.value;
@@ -17,37 +18,39 @@ const Contact = () => {
         const phone = e.target.phone.value;
         const location = e.target.location.value;
         const message = e.target.message.value;
-        const contactDetails = { name, email, phone, location, message }
-        console.log(contactDetails);
-        axios.post('http://localhost:5000/message', contactDetails)
-        .then(res => {
-            console.log(res.data);
-            // maingun api key:  9feddaae8d02c2837314824f6f87335d-24bda9c7-72fe1d7b
-        })
+        const messageSentTime = new Date().toLocaleString()
+        const contactDetails = { name, email, phone, location, message, messageSentTime }
+        axiosSecure.post('/message', contactDetails)
+            .then(res => {
+                console.log(res.data);
+                // maingun api key:  9feddaae8d02c2837314824f6f87335d-24bda9c7-72fe1d7b
+            })
 
-
-    }
+    };
+    
     return (
         <div>
             <Helmet>
-                <title>Contact Us | My Portfolio website</title>
+                <title>Contact Us | Orbitshiftbd</title>
+                <meta name="description" content="This is your page description for SEO." />
+                <meta name="keywords" content="react, seo, meta tags, your-keywords-here" />
             </Helmet>
-            <div className="flex flex-col items-center py-8 md:w-3/4 mx-auto text-center space-y-4">
-                <h1 className="text-3xl font-bold">Contact</h1>
-                <p className="">Interested in hiring Us for your project or just want to say hi? You can fill in the contact form below or send me an email to <Link className="text-blue-600">evans@yourwebsite.com</Link> .Want to get connected? Follow us on the social channels below.</p>
+            <div className="flex flex-col items-center md:py-8 md:w-3/4 mx-auto text-center space-y-1 md:space-y-4">
+                <h1 className="text-2xl md:text-3xl font-bold">Contact</h1>
+                <p>Interested in hiring Us for your project or just want to say hi? You can fill in the contact form below or send me an email to <Link className="text-blue-600">info@orbitshiftbd.com</Link> .Want to get connected? Follow us on the social channels below.</p>
                 <div className="">
-                    <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+                    <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end mb-2">
                         <div className="flex gap-2 justify-center text-2xl">
-                            <Link to='https://www.facebook.com/WebFlexCode' target="_blank" className="socialBtnHover"><div className="socialIcon">  <CiFacebook /></div></Link>
-                            <Link to='https://www.linkedin.com/in/webflexcode/' target="_blank" className="socialBtnHover"><div className="socialIcon"><CiLinkedin /></div></Link>
-                            <Link to='https://www.instagram.com/webflexcode/' target="_blank" className="socialBtnHover"><div className="socialIcon"> <FaInstagram /></div></Link>
+                            <Link to='https://www.facebook.com/orbitshiftbd' target="_blank" className="socialBtnHover"><div className="socialIcon">  <CiFacebook /></div></Link>
+                            <Link to='https://www.linkedin.com/company/orbitshift-bd/?viewAsMember=true' target="_blank" className="socialBtnHover"><div className="socialIcon"><CiLinkedin /></div></Link>
+                            <Link to='https://www.instagram.com/orbitshiftbd/' target="_blank" className="socialBtnHover"><div className="socialIcon"> <FaInstagram /></div></Link>
                             <Link to='https://www.pinterest.com/webflexcode/' target="_blank" className="socialBtnHover"><div className="socialIcon"><FaPinterest /></div></Link>
                         </div>
                     </nav>
                 </div>
             </div>
-            <hr />
-            
+            <hr className=""/>
+
             <hr />
             {/* Contacts details */}
             <div className='grid grid-cols-1 md:grid-cols-4 justify-between items-center py-2 md:py-8'>
@@ -57,9 +60,9 @@ const Contact = () => {
 
             </div>
             {/* Phone location email */}
-            <div className="my-8 flex flex-wrap md:flex-row md:justify-between">
+            <div className="my-2 md:my-8 flex flex-wrap md:flex-row md:justify-between">
                 {/* 1st */}
-                <div className="flex gap-1 items-center  border-s-2 border-blue-600">
+                <div className="flex gap-1 items-center  border-s-2 border-blue-600 mb-2 md:mb-0">
                     <IoIosPhonePortrait className="text-3xl md:text-5xl text-blue-600 ml-2" />
                     <div className="space-y-1 md:space-y-2">
                         <h3 className="font-semibold text-xl">Whatsapp</h3>
@@ -67,7 +70,7 @@ const Contact = () => {
                     </div>
                 </div>
                 {/* 2nd */}
-                <div className="flex gap-1 items-center  border-s-2 border-blue-600">
+                <div className="flex gap-1 items-center  border-s-2 border-blue-600 mb-2 md:mb-0">
                     <CiLocationOn className="text-3xl md:text-5xl text-blue-600 ml-2" />
                     <div className="space-y-2">
                         <h3 className="font-semibold text-xl">Location</h3>
@@ -79,7 +82,7 @@ const Contact = () => {
                     <MdOutlineEmail className="text-3xl md:text-5xl text-blue-600 ml-2" />
                     <div className="space-y-2">
                         <h3 className="font-semibold text-xl">Email</h3>
-                        <h3>merndevelpler@gmail.com</h3>
+                        <h3>info@Orbitshiftbd.com</h3>
                     </div>
                 </div>
             </div>
@@ -121,7 +124,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div>
-                        <button type="submit" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium contactBtn  text-white  ">
+                        <button type="submit" className="px-3 md:px-5 md:py-4 py-2 rounded-full relative group overflow-hidden font-medium contactBtn  text-white  ">
                             <span className="absolute bottom-0 left-0 h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
                             <span className="relative group-hover:text-white flex items-center gap-2">Send Message</span>
                         </button>

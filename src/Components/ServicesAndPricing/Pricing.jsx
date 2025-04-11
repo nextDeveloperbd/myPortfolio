@@ -2,13 +2,19 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { FaLocationArrow } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import UseAxiosSecure from '../Hook/UseAxiosSecure';
 
 const Pricing = () => {
     const[prices, setPrices] = useState([]);
+    const axiosSecure = UseAxiosSecure();
     useEffect(()=>{
-        axios.get(`https://portfolio-server-psi-six.vercel.app/services`)
+        axiosSecure.get(`/services`)
         .then(res => {
             setPrices(res.data)
+        })
+        .catch(error =>{
+            console.log(error.message);
+            
         })
     },[])
     return (
@@ -26,7 +32,7 @@ const Pricing = () => {
                                     <div className="space-y-2 bg-[#1a3c3d] text-white text-center p-1 rounded">
                                         <h4 className="text-2xl font-bold">{price.plan}<span className='text-xl ml-2'>{price.icon}</span></h4>
                                         <h3>Starts from <span className="text-2xl md:text-4xl font-bold">$<span className='text-white'>{price.price}</span>
-                                            <span className="text-sm tracking-wide">/month</span>
+                                            <span className="text-sm tracking-wide"></span>
                                         </span></h3>
                                     </div>
                                     <p className="leading-relaxed font-semibold">{price.title}</p>
@@ -42,7 +48,7 @@ const Pricing = () => {
                                        
                                     </ul>
                                     <div className="mx-auto">
-                                        <Link href="#_" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium bg-[#1a3c3d]  text-white inline-block ">
+                                        <Link to="/contact" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium bg-[#5271ff]  text-white inline-block ">
                                             <span className="absolute bottom-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
                                             <span className="relative group-hover:text-white flex items-center gap-2"><FaLocationArrow />More Details Contact Us</span>
                                         </Link>
@@ -60,7 +66,7 @@ const Pricing = () => {
                 <h1 className="text-2xl font-semibold">Want to hire me for custom package?</h1>
                 <p className="">I have 10+ years of development experience building software for the web and mobile devices. You can take a look at my online resume and project portfolio to find out more about my skills and experiences.</p>
                 <div className="">
-                    <Link href="#_" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium bg-[#5271ff]  text-white inline-block ">
+                    <Link to="/contact" className="px-5 py-4 rounded-full relative group overflow-hidden font-medium bg-[#5271ff]  text-white inline-block ">
                         <span className="absolute bottom-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90"></span>
                         <span className="relative group-hover:text-white flex items-center gap-2"><FaLocationArrow />Hire Me</span>
                     </Link>

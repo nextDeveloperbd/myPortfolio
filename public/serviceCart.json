@@ -1,0 +1,34 @@
+[
+    
+    {
+      "img_url": "https://i.ibb.co.com/0z8Y43k/web-development.png",
+      "title": "Web Design & Development",
+      "description": "Web development and design create and style websites, making them functional, user-friendly, and visually appealing."
+    },
+    {
+        "img_url": "https://i.ibb.co.com/LDDVd0G7/google-ads-48.png",
+        "title": "Google Ads",
+        "description": "Google Ads is a platform where businesses pay to show ads on Google. You only pay when someone clicks your ad, helping you reach more customers online."
+      },
+    {
+      "img_url": "https://i.ibb.co.com/r2vG7Yg9/facebook.png",
+      "title": "FB marketing & paid Campaign",
+      "description": "Facebook marketing and campaigns involve promoting products or services on Facebook through posts, ads, and targeted campaigns to reach specific audiences and boost engagement, traffic, or sales."
+    },
+    {
+      "img_url": "https://i.ibb.co.com/9kh8BZdP/digital-marketing.png",
+      "title": "Digital Marketing",
+      "description": "Digital marketing promotes brands using online channels like social media, email, and search engines."
+    },
+    {
+      "img_url": "https://i.ibb.co.com/rR2Mx5fM/Seo.png",
+      "title": "Search Engine Optimization",
+      "description": "Search Engine Optimization (SEO) is the process of improving a website’s visibility on search engines like Google to get more organic (free) traffic."
+    },
+    {
+      "img_url": "https://i.ibb.co.com/r2vG7Yg9/facebook.png",
+      "title": "Social Media Marketing",
+      "description": "Social media marketing uses platforms like Facebook and Instagram to promote products and connect with audiences."
+    }
+  ]
+  

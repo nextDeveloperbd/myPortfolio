@@ -25,6 +25,20 @@ import BlogDetails from './Components/Blogs/BlogDetails.jsx';
 import Register from './Components/Register/Register.jsx';
 import LogIn from './Components/Login/LogIn.jsx';
 import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
+import { Toaster } from 'react-hot-toast';
+import Dashboard from './Components/Dashboard/Dashboard.jsx';
+import Admin from './Components/Dashboard/Admin.jsx';
+import ShoppingCart from './Components/ShoppingCart/ShoppingCart.jsx';
+import ProductDetails from './Components/Products/ProductDetails.jsx';
+import PrivateRoute from './Components/Routes/PrivateRoute.jsx';
+import CheckOut from './Components/ShoppingCart/CheckOut.jsx';
+import CheckOutList from './Components/Dashboard/CheckOutList.jsx';
+import MessageList from './Components/Dashboard/MessageList.jsx';
+import Users from './Components/Dashboard/Users.jsx';
+import UploadForm from './Components/Dashboard/UploadForm.jsx';
+import UseAxiosPublic from './Components/Hook/UseAxiosPublic.jsx';
+const axiosPublic = UseAxiosPublic()
+
 
 // Create a client
 const queryClient = new QueryClient()
@@ -45,7 +59,10 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <Details></Details>,
-        loader: ({ params }) => fetch(`https://portfolio-server-psi-six.vercel.app/details/${params.id}`)
+        loader: async ({ params }) => {
+          const response = await axiosPublic.get(`/details/${params.id}`);
+          return response.data;
+        }
       },
       {
         path: '/services',
@@ -56,13 +73,24 @@ const router = createBrowserRouter([
         element: <Products></Products>
       },
       {
+        path: '/productDetails/:id',
+        element: <ProductDetails></ProductDetails>,
+        loader: async ({ params }) => {
+          const response = await axiosPublic.get(`/productDetails/${params.id}`);
+          return response.data;
+        }
+      },
+      {
         path: '/blogs',
         element: <Blogs></Blogs>
       },
       {
         path: '/blogDetails/:id',
         element: <BlogDetails></BlogDetails>,
-        loader: ({ params }) => fetch(`https://portfolio-server-psi-six.vercel.app/blogDetails/${params.id}`)
+        loader: async ({ params }) => {
+          const response = await axiosPublic.get(`/blogDetails/${params.id}`);
+          return response.data;
+        }
       },
       {
         path: '/teamMembers',
@@ -79,6 +107,40 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <LogIn></LogIn>
+      },
+      {
+        path:'/shoppingCart',
+        element:<PrivateRoute><ShoppingCart></ShoppingCart></PrivateRoute>
+      },
+      {
+        path:'/checkOut',
+        element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>
+      },
+      {
+        path:'/dashboard',
+        element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children:[
+          {
+            path:'/dashboard',
+            element:<Admin></Admin>
+          },
+          {
+            path:'users',
+            element:<Users></Users>
+          },
+          {
+            path:'checkOutList',
+            element:<CheckOutList></CheckOutList>
+          },
+          {
+            path:'messageList',
+            element:<MessageList></MessageList>
+          },
+          {
+            path:'upload',
+            element:<UploadForm></UploadForm>
+          }
+        ]
       }
 
     ]
@@ -91,7 +153,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <AuthProvider>
         <HelmetProvider>
           <RouterProvider router={router}></RouterProvider>
-          {/* <Toaster /> */}
+          <Toaster />
         </HelmetProvider>
       </AuthProvider>
     </QueryClientProvider>
